@@ -5,9 +5,9 @@
 ```
 Aşama 0 ██████████ ✅ Tamamlandı
 Aşama 1 ██████████ ✅ Tamamlandı
-Aşama 2 ██████████ 🔄 Reklam Odaklı UI/UX Revizyonu
-Aşama 3 ░░░░░░░░░░ ⏳ Şu An Yürütülüyor (Teknik İskelet & Build)
-Aşama 4 ░░░░░░░░░░ Beklemede (Tasarım Sistemi & Ana Sayfa)
+Aşama 2 ██████████ 🔄 Reklam Odaklı UI/UX Revizyonu (Sunuluyor)
+Aşama 3 ██████████ ✅ Tamamlandı (Vite İskeleti & Build Başarılı)
+Aşama 4 ░░░░░░░░░░ ⏳ Sırada (Tasarım Sistemi & Ana Sayfa Kodlaması)
 Aşama 5 ░░░░░░░░░░ Beklemede (İçerik & Etkileşimler)
 Aşama 6 ░░░░░░░░░░ Beklemede (SEO & Analitik)
 Aşama 7 ░░░░░░░░░░ Beklemede (Test & Kalite)
@@ -33,21 +33,21 @@ Aşama 8 ░░░░░░░░░░ Beklemede (Yayına Alma)
 ---
 
 ### Aşama 2 — Reklam Odaklı UI/UX ve İçerik Planı 🔄
-**Kullanıcının son kararları doğrultusunda güncelleniyor:**
+**Kullanıcının son kararları doğrultusunda hazırlandı ve sunuldu:**
 - [x] İlk mimari ve tel kafes planı (`docs/STAGE2_UIUX_PLAN.md`)
-- [ ] Reklam odaklı, dikkat çekici, net WhatsApp CTA kurgulu revize sunum
-- [ ] İlk ekran (Hero) doğrudan değer önerisi metinleri
-- [ ] Gerçek fotoğraf çekim listesi ve geçici yer tutucu stratejisi
+- [x] Reklam odaklı, dikkat çekici, net WhatsApp CTA kurgulu revize sunum
+- [x] İlk ekran (Hero) doğrudan değer önerisi ve mesaj hiyerarşisi
+- [x] Gerçek fotoğraf çekim listesi ve geçici yer tutucu stratejisi
 
 ---
 
-### Aşama 3 — Teknik Mimari ve Temel Proje İskeleti ⏳
-**Şu an yürütülüyor:**
-- [ ] Vite + Vanilla HTML/CSS/JS iskelet kurulumu (`package.json`, `vite.config.js`)
-- [ ] Dizin yapısı (`src/config`, `src/components`, `src/styles`, `src/utils`, `public`)
-- [ ] `business.js` güvenli merkezi yapılandırma (uydurma veri yok, null kontrolleri var)
-- [ ] Başlangıç semantik `index.html` ve `gizlilik.html`
-- [ ] `npm install` ve `npm run build` komutlarının çalıştırılıp doğrulanması
+### Aşama 3 — Teknik Mimari ve Temel Proje İskeleti ✅
+**Tamamlandı & Doğrulandı:**
+- [x] Vite + Vanilla HTML/CSS/JS iskelet kurulumu (`package.json`, `vite.config.js`)
+- [x] Dizin yapısı (`src/config`, `src/components`, `src/styles`, `src/utils`, `public`)
+- [x] `business.js` güvenli merkezi yapılandırma (uydurma veri yok, null kontrolleri var)
+- [x] Başlangıç semantik `index.html` ve `gizlilik.html`
+- [x] `npm install` ve `npm run build` komutları çalıştırıldı, sıfır hatayla doğrulandı (`dist` üretildi, JS 2.49 KB)
 
 ---
 
