@@ -155,12 +155,62 @@ Her önemli teknik ve mimari karar, gerekçesiyle birlikte bu belgede kayıt alt
 
 ---
 
+## D09: Tasarım Yönü — Reklam ve Dönüşüm Odaklı
+
+**Tarih:** 2026-10-21  
+**Durum:** ✅ Onaylandı (kullanıcı tarafından)  
+
+**Karar:** Tasarım; doğrudan reklam kampanyalarından gelen mobil ziyaretçiyi hedefleyen, dikkat çekici, hızlı anlaşılan ve WhatsApp üzerinden fiyat teklifi almaya odaklanan bir yapıda olacaktır.
+- Agresif, rahatsız edici animasyonlar veya abartılı sahte vaatler kullanılmayacaktır.
+- İlk ekranda (Hero) değer önerisi anında anlaşılacak: "Bursa'da Adresinize Gelen Koltuk Yıkama Hizmeti".
+- Birincil aksiyon butonu: "WhatsApp'tan Hemen Fiyat Alın".
+- Mobilde ekranı kapatmayan, erişilebilir sabit çift buton (WhatsApp + Ara).
+
+---
+
+## D10: Fiyatlandırma Modeli — WhatsApp Üzerinden Teklif Alma
+
+**Tarih:** 2026-10-21  
+**Durum:** ✅ Onaylandı (kullanıcı tarafından)  
+
+**Karar:** Sitede sabit fiyat tablosu veya tahmini rakamlar yayımlanmayacaktır. Müşteriler koltuk/kanepe fotoğraflarını WhatsApp üzerinden ileterek yerinde inceleme öncesi net teklif alacaktır.
+
+**Gerekçe:**
+- Kumaş türü, koltuk boyutu, leke durumu ve minder sayısı fiyatı değiştirdiği için yanlış beklenti oluşturulması önlenir.
+- Kullanıcıyı doğrudan sıcak satış ve WhatsApp diyaloğuna çeker.
+
+---
+
+## D11: Marka ve İşletme Adı — Merkezi Değiştirilebilir İskelet
+
+**Tarih:** 2026-10-21  
+**Durum:** ✅ Kesinleşti  
+
+**Karar:** İşletme adı kesinleşene kadar proje kodunda ve içeriklerinde hardcoded metin kullanılmayacak, tüm marka ifadeleri `src/config/business.js` üzerinden dinamik beslenecektir. Geçici marka adı olarak isim listesinden güvenli bir temsil (`KoltukMobil Bursa` / `Bursa Seyyar Koltuk Yıkama`) kullanılacak, isim seçilince tek noktadan değiştirilecektir.
+
+---
+
+## D12: Sıfır Uydurma Veri Politikası (Zero-Hallucination Policy)
+
+**Tarih:** 2026-10-21  
+**Durum:** ✅ Kesinleşti  
+
+**Karar:**
+1. Gerçek olmayan telefon veya WhatsApp numarası yazılmayacak; numara yoksa butonlar açık bildirimli fallback durumunda olacak veya link üretmeyecektir.
+2. Kesinleşmeyen Bursa ilçeleri için uydurma liste oluşturulmayacaktır.
+3. Gerçek fotoğraf/videolar çekilene kadar açıkça "Yer Tutucu / Örnek Çalışma Alanı" olarak etiketlenmiş nötr yer tutucular kullanılacaktır.
+4. Sahte müşteri yorumu, sahte referans veya sahte puan eklenmeyecektir.
+5. Alan adı olmadan sahte canonical / sitemap üretilmeyecektir.
+
+---
+
 ## Karar Durum Açıklamaları
 
-- ✅ **Kesinleşti:** Prompt tarafından doğrudan desteklenen veya teknik olarak zorunlu kararlar.
-- 📋 **Önerildi:** Gerekçelendirilmiş öneriler. Onay veya alternatif tercih bekleniyor.
-- ❌ **Reddedildi:** Değerlendirilmiş ancak reddedilmiş seçenekler.
+- ✅ **Kesinleşti / Onaylandı:** Doğrudan kullanıcı tarafından onaylanan veya teknik olarak zorunlu kararlar.
+- 📋 **Önerildi:** Gerekçelendirilmiş öneriler.
+- ❌ **Reddedildi:** Değerlendirilmiş ancak elenmiş seçenekler.
 
 ---
 
 *Son güncelleme: 2026-10-21*
+

@@ -1,65 +1,61 @@
-# OPEN QUESTIONS — Bursa Seyyar Koltuk Yıkama
+## 🟢 Güncel Durum ve Alınan Kararlar (2026-10-21)
 
-Aşağıdaki sorular işletme sahibinden yanıt beklemektedir. Öncelik sıralarına göre gruplandırılmıştır.
+Aşağıdaki açık konular kullanıcı tarafından netleştirilmiştir:
 
-## 🔴 Kritik — Yayın Öncesi Kesinlikle Gerekli
+| Konu | Alınan Karar / Durum | Uygulama Yaklaşımı |
+|------|----------------------|-------------------|
+| **İşletme Adı (Q01)** | Henüz seçilmedi; 10 maddelik isim öneri havuzu hazırlandı (`KoltukMobil`, `KoltukJet Bursa` vb.). | `business.js` içinde geçici/placeholder tutulacak, arayüze dinamik bağlanacak. |
+| **Hizmet Bölgeleri (Q04)** | Bursa ilçeleri henüz net değil. | Kesin ilçe listesi yayımlanmayacak, "Bursa ve çevresinde yerinde hizmet" genel ifadesi kullanılacak, config'de dinamik tutulacak. |
+| **Medya & Görseller (Q06-Q08)** | Gerçek fotoğraf/videolar daha sonra çekilecek. | Yer tutucu (placeholder) kullanılacak; stok veya yapay görsel gerçek iş gibi sunulmayacak. |
+| **Fiyatlandırma (Q11)** | Sabit fiyat yayımlanmayacak; fiyatlar WhatsApp üzerinden teklif olarak verilecek. | "Koltuk fotoğraflarınızı WhatsApp'tan iletin, hemen net fiyat verelim" CTA mesajı vurgulanacak. |
+| **Tasarım Yönü (Q23)** | **Reklam odaklı, dikkat çekici ve dönüşüm odaklı.** | Adrese gelen seyyar hizmet değeri ilk ekranda verilecek, WhatsApp CTA'ları öne çıkacak, mobil çift buton sağlanacak. |
 
-Bu bilgiler olmadan site yayına **alınamaz**.
+---
 
-| # | Soru | Neden Kritik? |
+## 🔴 Kritik — Yayın Öncesi Kesinlikle Gerekli (Kalanlar)
+
+Bu bilgiler olmadan site yayına **alınamaz** (geliştirme aşamasında güvenli fallback kullanılacaktır):
+
+| # | Soru | Durum / Neden Kritik? |
+|---|------|-----------------------|
+| Q01 | İşletme adı nedir? | ⏳ İsim listesinden seçim bekleniyor. Geliştirmede geçici marka adı kullanılacak. |
+| Q02 | WhatsApp numarası nedir? (Uluslararası formatta, ör: 905XXXXXXXXX) | ⏳ Bekleniyor. Gerçek numara olmadan butonlar uydurma link üretmeyecek, bilgilendirici fallback gösterecek. |
+| Q03 | Telefon numarası nedir? | ⏳ Bekleniyor. İkincil iletişim kanalı. |
+| Q04 | Hangi ilçelere hizmet veriliyor? (Kesin liste) | ⏳ Netleşmedi. İlçe adı uydurulmayacak, dinamik liste boş/genel Bursa olarak tutulacak. |
+| Q05 | Çalışma saatleri nedir? (Hangi günler, saat aralığı) | ⏳ Bekleniyor. |
+
+---
+
+## 🟡 Yüksek Öncelik — İçerik ve Görsel Çekimi
+
+| # | Soru | Durum / Plan |
 |---|------|--------------|
-| Q01 | İşletme adı nedir? | Tüm sayfa başlıkları, SEO, yapısal veri ve markalaşma buna bağlı. |
-| Q02 | WhatsApp numarası nedir? (Uluslararası formatta, ör: 905XXXXXXXXX) | Birincil dönüşüm kanalı. Numara olmadan CTA'lar çalışmaz. |
-| Q03 | Telefon numarası nedir? | İkincil iletişim kanalı. |
-| Q04 | Hangi ilçelere hizmet veriliyor? (Kesin liste) | Hizmet bölgeleri sayfası ve SEO içeriği için gerekli. |
-| Q05 | Çalışma saatleri nedir? (Hangi günler, saat aralığı) | İletişim bölümü ve yapısal veri. |
+| Q06 | Gerçek işletme fotoğrafları (Ekip, araç, makine) | ⏳ Çekim listesi hazırlandı; gerçek çekimler sonra eklenecek. |
+| Q07 | Öncesi/sonrası fotoğrafları | ⏳ Gerçek çekimler bekleniyor; şimdilik açık yer tutucu kullanılacak. |
+| Q08 | Tanıtım videosu | ⏳ Opsiyonel / daha sonra değerlendirilecek. |
+| Q09 | Ek hizmetler (Sandalye, yatak vb.) | ⏳ Doğrulanana kadar yalnızca koltuk/kanepe/köşe takımı odaklı kalınacak. |
+| Q10 | Logo & marka renkleri | ⏳ İsim netleşince geçici temizlik renkleri (mavi/zümrüt/ferah tonlar) ile başlanacak. |
 
-## 🟡 Yüksek Öncelik — Yayın Kalitesini Doğrudan Etkiler
+---
 
-| # | Soru | Not |
-|---|------|-----|
-| Q06 | Gerçek işletme fotoğrafları var mı? (Ekip, araç, çalışma anı, ekipman) | Güven oluşturma için kritik. Yoksa profesyonel çekim planlanmalı. |
-| Q07 | Öncesi/sonrası fotoğrafları var mı? (Aynı mobilya, aynı açı) | Hizmet kalitesinin en güçlü kanıtı. |
-| Q08 | Kısa tanıtım videosu var mı veya planlanıyor mu? | Ana karşılama alanı için güçlü bir öğe olur. |
-| Q09 | Sandalye, yatak veya diğer döşemeli mobilya hizmetleri sunuluyor mu? | Prompt: "İşletme onaylamadan kesin hizmet olarak yayımlama." |
-| Q10 | Logo var mı? Marka renkleri belirlenmiş mi? | Tasarım sisteminin temeli. |
-| Q11 | Fiyatlandırma yaklaşımı nasıl? (Sabit fiyat mı, metre/parça bazlı mı, yerinde değerlendirme mi?) | SSS ve "Nasıl çalışır?" içeriği için. Kesin fiyat yayımlanmayacak. |
+## 🔵 Teknik ve Yayın Konuları
 
-## 🟢 Orta Öncelik — İçerik Kalitesini Artırır
+| # | Soru | Durum |
+|---|------|-------|
+| Q18 | Alan adı seçildi mi? | ⏳ İsim seçimine bağlı. Alan adı yokken uydurma sitemap URL'si oluşturulmayacak. |
+| Q20-Q22 | Analitik / Pixel / Hosting hesapları | ⏳ Kimlikler sağlanmadan izleme başlatılmayacak. |
 
-| # | Soru | Not |
-|---|------|-----|
-| Q12 | Gerçek müşteri yorumları/geri bildirimleri var mı? | Varsa doğrulanmış şekilde yayımlanabilir. Yoksa bölüm gizlenecek. |
-| Q13 | Hangi ekipman ve temizlik yöntemleri kullanılıyor? | "Nasıl çalışır?" ve güven bölümü. |
-| Q14 | Ortalama hizmet süresi nedir? (Ör: 2-kişilik koltuk) | SSS yanıtı. |
-| Q15 | Kuruma süresi nedir? | SSS yanıtı. |
-| Q16 | Hangi kumaş türlerine işlem uygulanabiliyor? | Temizlik rehberi ve SSS. |
-| Q17 | İşlem yapılamayan kumaş/durum var mı? | Temizlik rehberi güvenlik bilgisi. |
+---
 
-## 🔵 Düşük Öncelik — Yayın Sonrası Tamamlanabilir
+## Güvenli Kararlar ve Sıfır Uydurma İlkesi
 
-| # | Soru | Not |
-|---|------|-----|
-| Q18 | Alan adı seçildi mi? | Yayına alma aşamasında gerekli. |
-| Q19 | Google İşletme Profili var mı? | SEO entegrasyonu için faydalı ama zorunlu değil. |
-| Q20 | Google Analytics / Google Ads hesapları var mı? (Measurement ID, Conversion ID) | Analitik entegrasyonları için. |
-| Q21 | Meta (Facebook/Instagram) reklam hesabı var mı? (Pixel ID) | Meta Pixel entegrasyonu için. |
-| Q22 | Tercih edilen barındırma (hosting) var mı? | Yayına alma kararı. |
-| Q23 | Tasarım referansı olarak beğenilen siteler var mı? | UI/UX kararlarını yönlendirir. |
-
-## Varsayımlar ve Güvenli Kararlar
-
-Yukarıdaki sorulara yanıt gelene kadar aşağıdaki varsayımlarla ilerlenecektir:
-
-| Varsayım | Gerekçe | Geri Alınabilir mi? |
-|----------|---------|-------------------|
-| Site tek sayfadan oluşacak (SPA/Long-scroll + ayrı bilgilendirme sayfaları) | Küçük hizmet işletmesi, sade yapı | ✅ Evet |
-| Türkçe dilinde, Türkiye lokasyonu | Prompt açıkça belirtiyor | — |
-| Tüm işletme bilgileri merkezi config'den okunacak | Prompt zorunlu kılıyor | — |
-| Statik site, backend/DB yok | Prompt: "statik yeterliyse backend kurma" | ✅ Evet |
-| Geçici renk paleti kullanılacak (mavi-yeşil tonları, temizlik/güven) | Tasarım referansı yok, geçici olduğu belgelenecek | ✅ Evet |
-| İletişim formu eklenmeyecek (WhatsApp birincil) | Gereksiz karmaşıklıktan kaçınma | ✅ Evet |
+1. Gerçek olmayan telefon, WhatsApp veya e-posta adresi yazılmayacak.
+2. Gerçek olmayan ilçe isimleri kesin hizmet bölgesi gibi iddia edilmeyecek.
+3. Gerçek olmayan fiyat, indirim veya süre garantisi sunulmayacak.
+4. Stok fotoğraf veya yapay zeka çıktısı gerçek temizlik sonucu gibi sunulmayacak.
+5. Uydurma müşteri yorumu veya puanı yazılmayacak.
 
 ---
 
 *Son güncelleme: 2026-10-21*
+
