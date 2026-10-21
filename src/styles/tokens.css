@@ -1,0 +1,62 @@
+:root {
+  /* Renk Paleti - Temizlik, Ferahlık, Güven ve Dönüşüm */
+  --color-primary: #0284c7;        /* Güven veren canlı gök mavisi */
+  --color-primary-dark: #0369a1;
+  --color-primary-light: #e0f2fe;
+
+  --color-secondary: #0d9488;      /* Hijyen ve tazelik çağrıştıran zümrüt/turkuaz */
+  --color-secondary-dark: #0f766e;
+
+  --color-whatsapp: #25d366;       /* WhatsApp yeşili */
+  --color-whatsapp-hover: #20bd5a;
+
+  --color-dark: #0f172a;           /* Derin gece mavisi / metin rengi */
+  --color-dark-muted: #334155;
+  --color-light: #f8fafc;          /* Açık zemin */
+  --color-white: #ffffff;
+  --color-border: #e2e8f0;
+
+  /* Vurgu & Uyarı */
+  --color-accent: #f59e0b;         /* Dikkat çekici amber */
+  --color-surface-hover: #f1f5f9;
+
+  /* Tipografi */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+
+  /* Boşluklar (Spacing) */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+
+  /* Radius & Gölgeler */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-glow: 0 0 20px rgba(37, 211, 102, 0.35);
+
+  /* Geçişler */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+
+  /* Layout */
+  --container-max-width: 1140px;
+  --mobile-cta-height: 72px;
+}

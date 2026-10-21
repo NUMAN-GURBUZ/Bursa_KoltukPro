@@ -1,0 +1,6 @@
+# robots.txt — Bursa Seyyar Koltuk Yıkama
+# Not: Alan adı kesinleştiğinde Sitemap yönergesi eklenecektir.
+
+User-agent: *
+Allow: /
+Disallow: /gizlilik.html

@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+}
+
+.site-main {
+  flex: 1;
+}
+
+/* Mobilde alt CTA çubuğu için body alt boşluğu */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: calc(var(--mobile-cta-height) + var(--spacing-4));
+  }
+}
