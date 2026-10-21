@@ -31,7 +31,7 @@ Her önemli teknik ve mimari karar, gerekçesiyle birlikte bu belgede kayıt alt
 ## D02: Vite + Vanilla JS (Framework Seçimi)
 
 **Tarih:** 2026-10-21  
-**Durum:** 📋 Önerildi — onay bekleniyor  
+**Durum:** ✅ Onaylandı (kullanıcı tarafından)  
 
 **Karar:** Proje, **Vite** build aracı ile **Vanilla HTML/CSS/JavaScript** kullanılarak geliştirilecek. React, Vue veya benzeri bir UI framework'ü kullanılmayacak.
 
@@ -125,6 +125,33 @@ Her önemli teknik ve mimari karar, gerekçesiyle birlikte bu belgede kayıt alt
 | Güvenlik başlıkları | ✅ `_headers` dosyası | ✅ `vercel.json` | ❌ Sınırlı |
 | Form desteği | ✅ Yerleşik | ❌ | ❌ |
 | Maliyet | $0 | $0 | $0 |
+
+---
+
+## D07: Tek Sayfa (Long-Scroll) + Ayrı Gizlilik Sayfası
+
+**Tarih:** 2026-10-21  
+**Durum:** ✅ Kesinleşti  
+
+**Karar:** Ana site tek bir sayfa (`index.html`) olarak yapılandırılacak. Bölümler anchor linklerle erişilebilir. Gizlilik bildirimi ayrı sayfa (`privacy.html`).
+
+**Gerekçe:**
+- Küçük hizmet işletmesi için çok sayfalı yapı gereksiz.
+- Mobil kullanıcılar kaydırma hareketine alışkın.
+- Yasal içerik ana akışı bozmamalı → ayrı sayfa.
+
+---
+
+## D08: Güvenli CTA Render — null Kontrolü
+
+**Tarih:** 2026-10-21  
+**Durum:** ✅ Kesinleşti  
+
+**Karar:** `business.js`'teki eksik bilgiler `null` değeri alacak. Bileşenler `null` kontrolü yapacak: numara yoksa WhatsApp/telefon butonları gizlenecek, bozuk link oluşturulmayacak.
+
+**Gerekçe:**
+- Gerçek bilgiler girilmeden yanlışlıkla çalışan bağlantı oluşturulmasını önlemek.
+- Prompt: "Gerçek telefon numarası girilmeden üretim ortamında iletişim bağlantılarının tamamlandığını iddia etme."
 
 ---
 

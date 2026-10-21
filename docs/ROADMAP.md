@@ -5,8 +5,8 @@
 ```
 Aşama 0 ██████████ ✅ Tamamlandı
 Aşama 1 ██████████ ✅ Tamamlandı
-Aşama 2 ░░░░░░░░░░ ⏳ Sırada
-Aşama 3 ░░░░░░░░░░ Beklemede
+Aşama 2 ██████████ ✅ Tamamlandı
+Aşama 3 ░░░░░░░░░░ ⏳ Sırada
 Aşama 4 ░░░░░░░░░░ Beklemede
 Aşama 5 ░░░░░░░░░░ Beklemede
 Aşama 6 ░░░░░░░░░░ Beklemede
@@ -39,20 +39,25 @@ Aşama 7 ░░░░░░░░░░ Beklemede
 
 ---
 
-### Aşama 2 — UI/UX ve İçerik Planı ⏳
+### Aşama 2 — UI/UX ve İçerik Planı ✅
 
-**Durum:** Sırada — onay bekleniyor  
+**Durum:** Tamamlandı — onay bekleniyor  
 **Bağımlılıklar:** Aşama 0-1 tamamlanmış olmalı ✅  
-**Planlanan Çıktılar:**
-- [ ] Sayfa haritası (site map)
-- [ ] Kullanıcı yolculuğu diyagramı (user journey)
-- [ ] Mobil ve masaüstü wireframe açıklamaları
-- [ ] Tasarım sistemi temelleri (renkler, tipografi, spacing — geçici)
-- [ ] Bileşen listesi ve sorumlulukları
-- [ ] İçerik planı ve medya gereksinimleri
-- [ ] WhatsApp dönüşüm akışı detayı
+**Çıktılar:**
+- [x] Sayfa haritası (site map)
+- [x] Kullanıcı yolculuğu diyagramı (user journey — mobil ve masaüstü)
+- [x] Mobil ve masaüstü wireframe açıklamaları (10 bölüm)
+- [x] Tasarım sistemi temelleri (renkler, tipografi, spacing — geçici)
+- [x] Bileşen listesi ve sorumlulukları
+- [x] İçerik planı ve medya gereksinimleri (10 çekim maddesi)
+- [x] WhatsApp dönüşüm akışı detayı
+- [x] Temizlik rehberi etkileşim tasarımı
+- [x] Mobil sabit buton davranış kuralları
+- [x] SEO ve içerik planı
+- [x] 19 test senaryosu
+- [x] Mimari son değerlendirme (`docs/ARCHITECTURE_REVIEW.md`)
 
-**Not:** Tasarım referansları henüz onaylanmadığından, geri döndürülmesi zor tasarım kararları kesinleştirilmeyecek.
+**Not:** Tasarım referansları henüz onaylanmadığından, geçici öneriler kesinleşmiş kararlar olarak gösterilmemiştir.
 
 ---
 
