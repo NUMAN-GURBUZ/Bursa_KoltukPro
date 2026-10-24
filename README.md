@@ -17,8 +17,8 @@ Müşteriler, sabit veya yanıltıcı fiyat listeleri yerine mobilyalarının fo
 bursa_clean/
 ├── docs/               # Mimari, kararlar, gereksinimler ve UI/UX yol haritası
 ├── public/             # Statik varlıklar (Favicon, robots.txt, görseller, videolar)
-│   ├── images/         # Gerçek uygulama fotoğrafları
-│   └── videos/         # Sahada çekilmiş gerçek işlem videoları
+│   ├── images/         # Koltuk ve kanepe temizliği görselleri
+│   └── videos/         # Vakumlu yıkama tanıtım ve uygulama videoları
 ├── src/
 │   ├── config/         # Merkezi işletme ve iletişim yapılandırması (business.js)
 │   ├── styles/         # CSS tokenları, temel, düzen ve bileşen stilleri

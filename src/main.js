@@ -97,18 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3. WhatsApp CTA Butonlarını Güvenli Yapılandır
   const whatsappButtons = document.querySelectorAll('[data-action="whatsapp-cta"]');
-  const whatsappUrl = getWhatsAppUrl(
-    businessConfig.contact.whatsapp,
-    businessConfig.contact.whatsappPrefillMessage
-  );
 
   whatsappButtons.forEach(btn => {
+    const customMsg = btn.getAttribute('data-whatsapp-message') || businessConfig.contact.whatsappPrefillMessage;
+    const whatsappUrl = getWhatsAppUrl(businessConfig.contact.whatsapp, customMsg);
+
     if (whatsappUrl) {
       btn.setAttribute('href', whatsappUrl);
       btn.setAttribute('target', '_blank');
       btn.setAttribute('rel', 'noopener noreferrer');
       btn.addEventListener('click', () => {
-        analytics.trackEvent('whatsapp_click', { label: 'hero_or_card_cta' });
+        analytics.trackEvent('whatsapp_click', { label: btn.getAttribute('data-whatsapp-message') ? 'service_card_cta' : 'general_cta' });
       });
     } else {
       btn.setAttribute('href', '#');
