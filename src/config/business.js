@@ -20,8 +20,8 @@ export const businessConfig = {
 
   // İletişim Kanalları
   contact: {
-    phone: null,             // Örnek: '+905XXXXXXXXX'
-    phoneDisplay: null,      // Örnek: '05XX XXX XX XX'
+    phone: '05433704523',    // Yerel Türkiye mobil formatı; phone yardımcısı tel:+905433704523 biçimine dönüştürür
+    phoneDisplay: '0543 370 45 23',
     whatsapp: '05433704523', // Yerel Türkiye mobil formatı; URL yardımcısı 905XXXXXXXXX biçimine dönüştürür
     whatsappPrefillMessage: 'Merhaba, Bursa\'da koltuk yıkama hizmeti almak istiyorum. Fiyat bilgisi alabilir miyim?',
     email: null,

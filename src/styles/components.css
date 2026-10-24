@@ -126,6 +126,18 @@
   gap: var(--spacing-2);
 }
 
+.header-phone-btn {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .header-phone-btn {
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-sm);
+  }
+}
+
 .theme-toggle {
   display: inline-flex;
   align-items: center;
