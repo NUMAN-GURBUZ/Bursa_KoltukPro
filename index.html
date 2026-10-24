@@ -3,174 +3,479 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bursa Seyyar Koltuk Yıkama | Adresinize Gelen Profesyonel Temizlik</title>
-  <meta name="description" content="Bursa'da adresinize gelerek koltuk, kanepe ve köşe takımlarınızı yerinde temizliyoruz. WhatsApp'tan fotoğraf gönderin, anında fiyat alın.">
+  <title>Bursa KoltukPro | Adresinize Gelen Yerinde Koltuk ve Kanepe Temizliği</title>
+  <meta name="description" content="Bursa'da koltuk, kanepe ve köşe takımlarınızı taşımadan, adresinizde temizliyoruz. WhatsApp'tan mobilyanızın fotoğrafını ileterek kolayca fiyat teklifi alın.">
+  <!-- Open Graph / Sosyal Medya Paylaşım Metaverileri -->
+  <meta property="og:title" content="Bursa KoltukPro | Adresinize Gelen Yerinde Koltuk ve Kanepe Temizliği">
+  <meta property="og:description" content="Bursa'da koltuk, kanepe ve köşe takımlarınızı taşımadan, adresinizde temizliyoruz. WhatsApp'tan mobilyanızın fotoğrafını ileterek kolayca fiyat teklifi alın.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
-  <!-- Erişilebilirlik: İçeriğe Atla -->
-  <a href="#main-content" class="sr-only">Ana içeriğe atla</a>
+  <!-- Erişilebilirlik: Ana İçeriğe Atla -->
+  <a href="#main-content" class="sr-only">Ana içeriğe doğrudan atla</a>
 
-  <!-- Header İskeleti -->
+  <!-- 1. HEADER & MARKA ALANI -->
   <header class="site-header" role="banner">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; padding-bottom: 1rem;">
-      <div class="brand">
-        <strong data-bind="brand-name" style="font-size: 1.25rem; color: var(--color-primary-dark);">Bursa Seyyar Koltuk Yıkama</strong>
-        <span class="dev-badge" style="margin-left: 0.5rem;">İskelet Sürüm</span>
+    <div class="container header-inner">
+      <div class="brand-wrapper">
+        <a href="/" class="brand-title" aria-label="Ana Sayfa">
+          <span data-bind="brand-name">Bursa KoltukPro</span>
+        </a>
+        <div>
+          <span class="badge badge-clean" style="font-size: 0.7rem; padding: 0.15rem 0.5rem; margin-left: 0.25rem;">Seyyar Hizmet</span>
+        </div>
       </div>
-      <nav aria-label="Ana Menü">
-        <ul style="display: flex; gap: 1rem; list-style: none;">
-          <li><a href="#hizmetler">Hizmetler</a></li>
-          <li><a href="#surec">Nasıl Çalışır?</a></li>
-          <li><a href="#galeri">Örnek Çalışmalar</a></li>
-          <li><a href="#sss">SSS</a></li>
+
+      <nav class="header-nav" aria-label="Ana Gezinti Menüsü">
+        <ul class="header-nav-list">
+          <li><a href="#hizmetler" class="header-nav-link">Hizmetler</a></li>
+          <li><a href="#surec" class="header-nav-link">Nasıl Çalışır?</a></li>
+          <li><a href="#galeri" class="header-nav-link">Çalışma Alanı</a></li>
+          <li><a href="#leke-rehberi" class="header-nav-link">Kumaş & Leke Rehberi</a></li>
+          <li><a href="#sss" class="header-nav-link">SSS</a></li>
         </ul>
       </nav>
-      <div>
-        <a href="#hero" class="btn btn-whatsapp" data-action="whatsapp-cta" aria-label="WhatsApp üzerinden fiyat teklifi alın">
-          WhatsApp'tan Fiyat Al
+
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" data-action="theme-toggle" aria-label="Karanlık moda geç" aria-pressed="false" title="Karanlık moda geç">
+          <span aria-hidden="true" data-theme-toggle-icon>🌙</span>
+        </button>
+        <a href="#" class="btn btn-whatsapp" data-action="whatsapp-cta" aria-label="WhatsApp üzerinden teklif alın">
+          💬 Fiyat Teklifi Al
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Ana İçerik İskeleti -->
+  <!-- ANA İÇERİK -->
   <main id="main-content" class="site-main">
-    
-    <!-- Hero Bölümü İskeleti -->
-    <section id="hero" style="background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%); padding: 3rem 0; text-align: center;">
+
+    <!-- 2. HERO BÖLÜMÜ -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-title">
       <div class="container">
-        <span class="dev-badge" style="margin-bottom: 1rem;">📍 Bursa Geneli Adrese Seyyar Hizmet</span>
-        <h1 style="font-size: 2.25rem; margin-bottom: 1rem; color: var(--color-dark);">
-          Koltuklarınızı Taşımadan, <span style="color: var(--color-primary);">Adresinizde</span> Derinlemesine Temizliyoruz
-        </h1>
-        <p style="font-size: 1.125rem; max-width: 650px; margin: 0 auto 1.5rem auto; color: var(--color-dark-muted);">
-          Bursa'da yerinde koltuk, kanepe ve köşe takımı yıkama. Koltuğunuzun fotoğrafını WhatsApp'tan gönderin, anında net fiyat teklifi verelim.
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="badge badge-info">📍 Bursa — Adresinize Gelen Yerinde Hizmet</span>
+            <h1 id="hero-title" class="hero-title">
+              Koltuklarınızı Taşımadan, <span style="color: var(--color-primary);">Adresinizde</span> Yerinde Temizliyoruz
+            </h1>
+            <p class="hero-description" data-bind="brand-tagline">
+              Koltuk, kanepe ve köşe takımlarınız için adresinizde yerinde vakumlu temizlik. Mobilyanızın fotoğrafını WhatsApp'tan gönderin, model ve durumuna göre doğrudan net fiyat teklifi verelim.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#" class="btn btn-whatsapp" data-action="whatsapp-cta" style="font-size: 1.05rem; padding: 0.85rem 1.75rem;">
+                💬 WhatsApp'tan Fotoğrafla Fiyat Alın
+              </a>
+              <a href="#" class="btn btn-outline" data-action="phone-cta">
+                📞 Telefonla Bilgi Alın
+              </a>
+            </div>
+
+            <div class="hero-features">
+              <div class="feature-pill">
+                <span>🏠</span>
+                <span>Evinizde Temizlik (Taşınmaz)</span>
+              </div>
+              <div class="feature-pill">
+                <span>📸</span>
+                <span>Fotoğrafla Net Fiyat Teklifi</span>
+              </div>
+              <div class="feature-pill">
+                <span>🧼</span>
+                <span>Derinlemesine Vakumlu Yıkama</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-side">
+            <div class="hero-card">
+              <div class="hero-card-icon" aria-hidden="true">🛋️</div>
+              <h2 style="font-size: var(--font-size-lg); margin-bottom: 0.5rem; color: var(--color-dark);">
+                Fiyat Öğrenmek Çok Kolay
+              </h2>
+              <p style="font-size: var(--font-size-sm); color: var(--color-dark-muted); margin-bottom: var(--spacing-4);">
+                Kumaş türü ve koltuk büyüklüğü her modelde farklıdır. Yanıltıcı fiyatlar yerine, mobilyanızın bir fotoğrafını ilettiğinizde doğrudan net teklif hazırlıyoruz.
+              </p>
+              <div class="hero-card-steps">
+                <p><strong>1.</strong> Koltuğunuzun net bir fotoğrafını çekin.</p>
+                <p style="margin-top: 0.25rem;"><strong>2.</strong> WhatsApp hattımıza gönderin.</p>
+                <p style="margin-top: 0.25rem;"><strong>3.</strong> Model ve durumuna göre teklifinizi iletelim.</p>
+              </div>
+              <a href="#" class="btn btn-whatsapp btn-block" data-action="whatsapp-cta">
+                WhatsApp ile Fotoğraf Gönder
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. HİZMETLERİN TANITIMI -->
+    <section class="container section-padding" id="hizmetler" aria-labelledby="services-title">
+      <div class="section-header">
+        <span class="badge badge-clean">Hizmet Kapsamı</span>
+        <h2 id="services-title" class="section-title">Yerinde Temizlediğimiz Mobilyalar</h2>
+        <p class="section-subtitle">
+          Bursa'da adresinize gelerek kumaş yapısına uygun profesyonel vakumlu yıkama uyguladığımız mobilya türleri:
         </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="#" class="btn btn-whatsapp" data-action="whatsapp-cta" style="font-size: 1.125rem; padding: 0.875rem 1.75rem;">
-            💬 WhatsApp ile Hemen Fiyat Al
-          </a>
-          <a href="#" class="btn btn-outline" data-action="phone-cta">
-            📞 Doğrudan Ara
-          </a>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-card-header">
+            <div style="font-size: 2rem; margin-bottom: var(--spacing-2);" aria-hidden="true">🛋️</div>
+            <span class="badge badge-info">Yerinde Yıkama</span>
+            <h3 style="font-size: var(--font-size-xl); margin-top: var(--spacing-2); color: var(--color-dark);">Koltuk Yıkama</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-dark-muted); margin-top: var(--spacing-2); line-height: 1.6;">
+              Tekli, ikili ve üçlü salon koltuklarınız için kumaş liflerine işlemiş toz, kir ve lekelerin yerinde vakumlanarak arındırılması.
+            </p>
+          </div>
+          <div>
+            <div class="service-card-note">
+              📸 Fotoğraf ile WhatsApp üzerinden net fiyat teklifi verilir.
+            </div>
+            <a href="#" class="btn btn-outline btn-block" data-action="whatsapp-cta" style="font-size: var(--font-size-sm);">
+              Bu Hizmet İçin Fiyat Al
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card-header">
+            <div style="font-size: 2rem; margin-bottom: var(--spacing-2);" aria-hidden="true">🛏️</div>
+            <span class="badge badge-info">Yerinde Yıkama</span>
+            <h3 style="font-size: var(--font-size-xl); margin-top: var(--spacing-2); color: var(--color-dark);">Kanepe & Çekyat Yıkama</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-dark-muted); margin-top: var(--spacing-2); line-height: 1.6;">
+              Günlük oturma ve yatma amaçlı kullanılan kanepelerde biriken kirlerin kumaş dokusu korunarak adresinizde temizlenmesi.
+            </p>
+          </div>
+          <div>
+            <div class="service-card-note">
+              📸 Fotoğraf ile WhatsApp üzerinden net fiyat teklifi verilir.
+            </div>
+            <a href="#" class="btn btn-outline btn-block" data-action="whatsapp-cta" style="font-size: var(--font-size-sm);">
+              Bu Hizmet İçin Fiyat Al
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card-header">
+            <div style="font-size: 2rem; margin-bottom: var(--spacing-2);" aria-hidden="true">📐</div>
+            <span class="badge badge-info">Yerinde Yıkama</span>
+            <h3 style="font-size: var(--font-size-xl); margin-top: var(--spacing-2); color: var(--color-dark);">Köşe Takımı (L Koltuk)</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-dark-muted); margin-top: var(--spacing-2); line-height: 1.6;">
+              Geniş oturumlu L ve U köşe koltuklar için sünger dokusuna kadar derinlemesine vakumlu yerinde yıkama ve hijyen bakımı.
+            </p>
+          </div>
+          <div>
+            <div class="service-card-note">
+              📸 Fotoğraf ile WhatsApp üzerinden net fiyat teklifi verilir.
+            </div>
+            <a href="#" class="btn btn-outline btn-block" data-action="whatsapp-cta" style="font-size: var(--font-size-sm);">
+              Bu Hizmet İçin Fiyat Al
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. HİZMET SÜRECİ (NASIL ÇALIŞIR?) -->
+    <section class="section-alt" id="surec" aria-labelledby="steps-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-info">Şeffaf Süreç</span>
+          <h2 id="steps-title" class="section-title">Hizmetimiz Nasıl İşliyor?</h2>
+          <p class="section-subtitle">
+            Koltuklarınızı yerinden kaldırmadan temizletmeniz için 4 adımlı basit süreç:
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 style="font-size: var(--font-size-lg); margin-bottom: 0.5rem; color: var(--color-dark);">Fotoğraf Çekin</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-dark-muted); line-height: 1.6;">
+              Temizlenmesini istediğiniz koltuk veya kanepenin gün ışığında çekilmiş bir fotoğrafını hazırlayın.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 style="font-size: var(--font-size-lg); margin-bottom: 0.5rem; color: var(--color-dark);">WhatsApp'tan İletin</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-dark-muted); line-height: 1.6;">
+              Fotoğrafı ve bulunduğunuz bölgeyi ileterek sürpriz maliyet olmadan doğrudan net fiyat teklifi alın.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 style="font-size: var(--font-size-lg); margin-bottom: 0.5rem; color: var(--color-dark);">Adresinize Gelelim</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-dark-muted); line-height: 1.6;">
+              Kararlaştırılan gün ve saatte profesyonel yıkama ekipmanımızla kapınıza gelelim.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3 style="font-size: var(--font-size-lg); margin-bottom: 0.5rem; color: var(--color-dark);">Yerinde Teslim Alın</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-dark-muted); line-height: 1.6;">
+              Vakumlu işlem tamamlandıktan sonra koltuklarınız evinizde havalanmaya bırakılır ve temiz şekilde teslim edilir.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Hizmetler İskeleti -->
-    <section id="hizmetler" style="padding: 3rem 0;">
-      <div class="container">
-        <div style="text-align: center; margin-bottom: 2rem;">
-          <h2 style="font-size: 1.75rem; color: var(--color-dark);">Yerinde Yıkama Hizmetlerimiz</h2>
-          <p style="color: var(--color-dark-muted);">Müşterimizin ev veya ofis adresine gelerek uyguladığımız uzman hizmetler</p>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-          <article style="background: white; padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-            <h3>Koltuk Yıkama</h3>
-            <p style="margin: 0.75rem 0; color: var(--color-dark-muted);">Tekli, ikili ve üçlü koltuklar için antibakteriyel derin temizlik.</p>
-            <span class="dev-badge">WhatsApp Teklifi</span>
-          </article>
-          <article style="background: white; padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-            <h3>Kanepe & Çekyat Yıkama</h3>
-            <p style="margin: 0.75rem 0; color: var(--color-dark-muted);">Açılır kapanır çekyat ve kanepelerde koku ve leke giderme.</p>
-            <span class="dev-badge">WhatsApp Teklifi</span>
-          </article>
-          <article style="background: white; padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-            <h3>Köşe Takımı (L Koltuk) Yıkama</h3>
-            <p style="margin: 0.75rem 0; color: var(--color-dark-muted);">Geniş minder ve modüler parçaların kumaşa zarar vermeden yıkanması.</p>
-            <span class="dev-badge">WhatsApp Teklifi</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Süreç İskeleti -->
-    <section id="surec" style="background: #ffffff; padding: 3rem 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
-      <div class="container">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Nasıl Çalışır? (4 Kolay Adım)</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; text-align: center;">
-          <div style="padding: 1rem;">
-            <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-primary); margin-bottom: 0.5rem;">1</div>
-            <h4>Fotoğrafını Çekin</h4>
-            <p style="font-size: 0.875rem; color: var(--color-dark-muted);">Temizlenecek koltuğunuzun net bir fotoğrafını çekin.</p>
-          </div>
-          <div style="padding: 1rem;">
-            <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-primary); margin-bottom: 0.5rem;">2</div>
-            <h4>WhatsApp'tan İletin</h4>
-            <p style="font-size: 0.875rem; color: var(--color-dark-muted);">Fotoğrafı bize gönderin, birkaç dakika içinde net fiyat alın.</p>
-          </div>
-          <div style="padding: 1rem;">
-            <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-primary); margin-bottom: 0.5rem;">3</div>
-            <h4>Adresinize Gelelim</h4>
-            <p style="font-size: 0.875rem; color: var(--color-dark-muted);">Randevu saatinizde profesyonel makinemizle kapınıza gelelim.</p>
-          </div>
-          <div style="padding: 1rem;">
-            <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-primary); margin-bottom: 0.5rem;">4</div>
-            <h4>Pırıl Pırıl Teslim</h4>
-            <p style="font-size: 0.875rem; color: var(--color-dark-muted);">Koltuklarınızı tertemiz, hijyenik ve mis kokulu kullanın.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gerçek Görsel / Yer Tutucu Alanı -->
-    <section id="galeri" style="padding: 3rem 0;">
-      <div class="container">
-        <h2 style="text-align: center; margin-bottom: 1rem;">Örnek Çalışma Alanı</h2>
-        <p style="text-align: center; color: var(--color-dark-muted); margin-bottom: 1.5rem;">
-          Gerçek müşteri öncesi/sonrası fotoğrafları çekimler tamamlandığında burada sergilenecektir.
+    <!-- 5. GERÇEK UYGULAMA VE GALERİ ALANI -->
+    <section class="container section-padding" id="galeri" aria-labelledby="gallery-title">
+      <div class="section-header">
+        <span class="badge badge-clean">Gerçek Uygulamalar</span>
+        <h2 id="gallery-title" class="section-title">Sahadaki Çalışmalarımız ve Temizlik Aşamaları</h2>
+        <p class="section-subtitle">
+          Bursa içi adreslerde gerçekleştirdiğimiz yerinde koltuk ve döşeme temizliği işlemlerinden gerçek kareler ve uygulama videoları:
         </p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-          <div class="placeholder-box">
-            📷 <strong>Öncesi / Sonrası Yer Tutucu 1</strong>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Gerçek çekim fotoğrafı eklenecektir.</p>
+      </div>
+
+      <div class="gallery-media-grid">
+        <!-- 1. Gerçek Resim Kartı -->
+        <article class="gallery-media-card">
+          <div class="gallery-media-wrapper">
+            <img 
+              src="/images/images.jpg" 
+              alt="Bursa yerinde koltuk yıkama ve leke temizleme uygulaması" 
+              class="gallery-media-img"
+              loading="lazy"
+            >
           </div>
-          <div class="placeholder-box">
-            📷 <strong>Öncesi / Sonrası Yer Tutucu 2</strong>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Gerçek çekim fotoğrafı eklenecektir.</p>
+          <div class="gallery-media-info">
+            <span class="gallery-badge">📸 Yerinde Uygulama</span>
+            <h3 style="font-size: var(--font-size-base); color: var(--color-dark); margin: 0;">Detaylı Kumaş Temizliği</h3>
+            <p style="font-size: var(--font-size-xs); color: var(--color-dark-muted); margin: 0; line-height: 1.5;">
+              Özel solüsyon ve profesyonel başlıklarla koltuk kumaşına zarar vermeden derinlemesine hijyen sağlanır.
+            </p>
+          </div>
+        </article>
+
+        <!-- 2. Gerçek Video Kartı -->
+        <article class="gallery-media-card">
+          <div class="gallery-media-wrapper">
+            <video 
+              class="gallery-video" 
+              controls 
+              playsinline 
+              preload="metadata"
+              aria-label="Vakumlu koltuk yıkama işlem videosu"
+            >
+              <source src="/videos/videos.mp4" type="video/mp4">
+              Tarayıcınız video etiketini desteklemiyor.
+            </video>
+          </div>
+          <div class="gallery-media-info">
+            <span class="gallery-badge">🎥 İşlem Anı Videosu</span>
+            <h3 style="font-size: var(--font-size-base); color: var(--color-dark); margin: 0;">Güçlü Vakumlama & Kir Çekimi</h3>
+            <p style="font-size: var(--font-size-xs); color: var(--color-dark-muted); margin: 0; line-height: 1.5;">
+              Vakumlu çekim anında koltuk süngerindeki kirli suyun ve tozların nasıl çekildiğini izleyin.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. KUMAŞ BAKIMI VE LEKE REHBERİ (İNTERAKTİF BÖLÜM) -->
+    <section class="section-alt" id="leke-rehberi" aria-labelledby="guide-title">
+      <div class="container" style="max-width: 900px;">
+        <div class="section-header">
+          <span class="badge badge-info">Faydalı Bilgiler</span>
+          <h2 id="guide-title" class="section-title">Kumaş Bakımı ve Acil Leke İpuçları</h2>
+          <p class="section-subtitle">
+            Koltuk kumaşlarında yapılan en büyük hata lekeyi sertçe ovalamaktır. Profesyonel temizlik öncesi dikkat edebileceğiniz güvenli ilk müdahaleler:
+          </p>
+        </div>
+
+        <!-- Sekme Butonları -->
+        <div class="guide-tabs" role="tablist" aria-label="Leke Rehberi Başlıkları">
+          <button class="guide-tab-btn active" role="tab" aria-selected="true" data-tab-target="tab-cay" id="tab-btn-cay" aria-controls="tab-cay">
+            ☕ Çay & Kahve Lekesi
+          </button>
+          <button class="guide-tab-btn" role="tab" aria-selected="false" data-tab-target="tab-evcil" id="tab-btn-evcil" aria-controls="tab-evcil">
+            🐾 Evcil Hayvan & Koku
+          </button>
+          <button class="guide-tab-btn" role="tab" aria-selected="false" data-tab-target="tab-yag" id="tab-btn-yag" aria-controls="tab-yag">
+            🍟 Yağ & Yemek Lekeleri
+          </button>
+          <button class="guide-tab-btn" role="tab" aria-selected="false" data-tab-target="tab-yanlis" id="tab-btn-yanlis" aria-controls="tab-yanlis">
+            ⚠️ Yanlış Müdahaleler
+          </button>
+        </div>
+
+        <!-- Sekme Panelleri -->
+        <div class="guide-panel active" role="tabpanel" id="tab-cay" aria-labelledby="tab-btn-cay" data-tab-panel>
+          <h3 style="font-size: var(--font-size-lg); color: var(--color-dark); margin-bottom: var(--spacing-3);">Çay ve Kahve Dökülmelerinde Ne Yapılmalı?</h3>
+          <div class="advice-box">
+            <strong>✅ Doğru Yaklaşım:</strong> Sıvı döküldüğünde vakit kaybetmeden kuru bir kağıt havlu ile sıvıyı tamponlayarak çektirin. Bastırmadan yalnızca temas ettirin.
+          </div>
+          <div class="warning-box">
+            <strong>❌ Kaçınılması Gereken:</strong> Islak bezle sertçe ovalamak lekeyi kumaş liflerine ve alt süngere daha derin işletir; renk dalgalanmasına neden olabilir.
+          </div>
+        </div>
+
+        <div class="guide-panel" role="tabpanel" id="tab-evcil" aria-labelledby="tab-btn-evcil" data-tab-panel hidden>
+          <h3 style="font-size: var(--font-size-lg); color: var(--color-dark); margin-bottom: var(--spacing-3);">Evcil Hayvan Temizliği ve Koku Yönetimi</h3>
+          <div class="advice-box">
+            <strong>✅ Doğru Yaklaşım:</strong> Döşemedeki dökülen tüyleri düzenli olarak kuru elektrik süpürgesiyle süpürün. Sıvı temasında nemi kuru havluyla alın.
+          </div>
+          <div class="warning-box">
+            <strong>❌ Kaçınılması Gereken:</strong> Kokuyu maskelemek için ağır parfüm veya oda spreyi sıkmak kumaşta yapışkan leke bırakabilir ve kokuyla birleşerek rahatsız edici hale gelebilir.
+          </div>
+        </div>
+
+        <div class="guide-panel" role="tabpanel" id="tab-yag" aria-labelledby="tab-btn-yag" data-tab-panel hidden>
+          <h3 style="font-size: var(--font-size-lg); color: var(--color-dark); margin-bottom: var(--spacing-3);">Yağ ve Sos Lekelerinde İlk Adım</h3>
+          <div class="advice-box">
+            <strong>✅ Doğru Yaklaşım:</strong> Katı sos fazlalığını kumaşı zedelemeden bir kaşık veya bıçak sırtıyla nazikçe alın. Ardından yerinde profesyonel yıkama talep edin.
+          </div>
+          <div class="warning-box">
+            <strong>❌ Kaçınılması Gereken:</strong> Sıcak su veya ütü buharı uygulamayın; yüksek ısı yağ bileşenlerini kumaşa sabitleyebilir.
+          </div>
+        </div>
+
+        <div class="guide-panel" role="tabpanel" id="tab-yanlis" aria-labelledby="tab-btn-yanlis" data-tab-panel hidden>
+          <h3 style="font-size: var(--font-size-lg); color: var(--color-dark); margin-bottom: var(--spacing-3);">Evde Sıkça Yapılan Riskli Müdahaleler</h3>
+          <div class="advice-box">
+            <strong>✅ Doğru Yaklaşım:</strong> Koltuğunuzun kumaş etiketinde yazan bakım talimatlarına uyun veya WhatsApp üzerinden fotoğraf göndererek danışın.
+          </div>
+          <div class="warning-box">
+            <strong>❌ Kaçınılması Gereken:</strong> Bulaşık deterjanı, tuzruhu veya yoğun çamaşır suyu kullanmak süngeri çürütebilir ve kumaş rengini kalıcı olarak bozabilir.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SSS İskeleti -->
-    <section id="sss" style="padding: 3rem 0; background: #ffffff;">
-      <div class="container" style="max-width: 800px;">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Sıkça Sorulan Sorular</h2>
-        <details style="margin-bottom: 1rem; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm);">
-          <summary style="font-weight: 600; cursor: pointer;">Koltuklar evde mi yıkanıyor, taşınıyor mu?</summary>
-          <p style="margin-top: 0.5rem; color: var(--color-dark-muted);">Hizmetimiz tamamen seyyardır. Koltuklarınız evinizde, yerinde profesyonel vakumlu yıkama makinesiyle temizlenir; hiçbir yere taşınmaz.</p>
+    <!-- 7. SIKÇA SORULAN SORULAR -->
+    <section class="container section-padding" id="sss" aria-labelledby="faq-title">
+      <div class="section-header">
+        <span class="badge badge-info">Merak Edilenler</span>
+        <h2 id="faq-title" class="section-title">Sıkça Sorulan Sorular</h2>
+        <p class="section-subtitle">
+          Yerinde seyyar koltuk yıkama hizmetimiz hakkında aklınıza takılabilecek konular:
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-summary">Koltuklar evden alınıp bir yere götürülüyor mu?</summary>
+          <div class="faq-answer">
+            Hayır. Hizmetimiz tamamen seyyardır. Profesyonel makinelerimizle adresinize gelinir ve koltuklarınız evinizde, yerinde temizlenir.
+          </div>
         </details>
-        <details style="margin-bottom: 1rem; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm);">
-          <summary style="font-weight: 600; cursor: pointer;">Fiyatı nasıl öğrenebilirim?</summary>
-          <p style="margin-top: 0.5rem; color: var(--color-dark-muted);">Koltuğunuzun veya kanepenizin bir fotoğrafını WhatsApp hattımıza iletmeniz yeterlidir. Kumaş ve model durumuna göre hemen net fiyat teklifi verilir.</p>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Fiyat teklifini nasıl alabilirim?</summary>
+          <div class="faq-answer">
+            Koltuğunuzun veya kanepenizin bir fotoğrafını WhatsApp hattımıza göndermeniz yeterlidir. Model ve durumuna göre doğrudan net fiyat bilgisi paylaşılır.
+          </div>
         </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Yıkama sonrası kuruma süresi ne kadardır?</summary>
+          <div class="faq-answer">
+            Vakumlama makinemiz kumaştaki suyun büyük bölümünü geri çeker. Odanın hava sirkülasyonuna ve mevsime bağlı olarak ortalama birkaç saat içinde kuruma tamamlanır.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">Temizlik sırasında evde neye ihtiyaç var?</summary>
+          <div class="faq-answer">
+            Yalnızca elektrik prizi ve temiz su temini yeterlidir. Gerekli tüm özel solüsyon ve profesyonel ekipman servisimiz tarafından getirilir.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. HİZMET BÖLGESİ ALANI -->
+    <section class="section-alt" id="bolge" aria-labelledby="location-title">
+      <div class="container" style="max-width: 800px; text-align: center;">
+        <span class="badge badge-clean">Hizmet Alanı</span>
+        <h2 id="location-title" class="section-title" style="margin-top: 0.5rem;">Bursa İçi Adrese Servis</h2>
+        <p class="section-subtitle" style="margin-bottom: var(--spacing-6);">
+          Hizmetimiz tamamen seyyar modelde olup, Bursa içinde belirlenen servis noktalarına müşterinin ev veya ofis adresine gidilerek sunulmaktadır.
+        </p>
+        <div class="service-area-box">
+          <p><strong>📍 Seyyar Hizmet Notu:</strong> Sabit bir dükkan veya mağazamız bulunmamaktadır. Randevu saatinizde aracımız ve makinelerimizle doğrudan adresinize geliyoruz.</p>
+          <p style="margin-top: 0.5rem;">İlçeniz veya mahalleniz için uygunluk durumunu öğrenmek adına WhatsApp üzerinden konum veya adres bilgisi paylaşabilirsiniz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. WHATSAPP İLETİŞİM ÇAĞRISI (CTA KAPANIŞI) -->
+    <section class="container section-padding">
+      <div class="cta-banner">
+        <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: var(--spacing-3);">
+          Koltuklarınız İçin Hemen Fiyat Teklifi Alın
+        </h2>
+        <p style="font-size: 1.1rem; opacity: 0.95; max-width: 600px; margin: 0 auto var(--spacing-6) auto; line-height: 1.6;">
+          Fotoğraf gönderin, adresinize gelerek temizleyelim. Koltuk taşımaya son.
+        </p>
+        <div style="display: flex; gap: var(--spacing-3); justify-content: center; flex-wrap: wrap;">
+          <a href="#" class="btn btn-whatsapp" data-action="whatsapp-cta" style="font-size: 1.1rem; padding: 0.85rem 2rem;">
+            💬 WhatsApp ile Fotoğraf Gönderin
+          </a>
+          <a href="#" class="btn btn-outline" data-action="phone-cta" style="border-color: white; color: white;">
+            📞 Telefonla Bilgi Alın
+          </a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer İskeleti -->
-  <footer class="site-footer" role="contentinfo" style="background: var(--color-dark); color: #94a3b8; padding: 2rem 0; text-align: center;">
-    <div class="container">
-      <p style="color: white; font-weight: bold; margin-bottom: 0.5rem;" data-bind="brand-name">Bursa Seyyar Koltuk Yıkama</p>
-      <p style="font-size: 0.875rem; margin-bottom: 1rem;">Bursa ve çevresinde yerinde (adrese teslim) profesyonel temizlik hizmeti.</p>
-      <p style="font-size: 0.8rem;">
-        <a href="/gizlilik.html" style="color: #cbd5e1; text-decoration: underline;">Gizlilik Bildirimi ve Aydınlatma Metni</a>
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo" style="background: var(--color-dark); color: #94a3b8; padding: var(--spacing-12) 0 var(--spacing-8) 0; border-top: 1px solid #1e293b;">
+    <div class="container" style="text-align: center;">
+      <div style="margin-bottom: var(--spacing-4);">
+        <strong style="color: white; font-size: 1.25rem;" data-bind="brand-name">Bursa KoltukPro</strong>
+        <p style="font-size: var(--font-size-xs); color: #cbd5e1; margin-top: 0.25rem;">Seyyar Koltuk Yıkama Hizmeti</p>
+      </div>
+      <p style="font-size: var(--font-size-sm); max-width: 600px; margin: 0 auto var(--spacing-4) auto; line-height: 1.6;">
+        Bursa'da adrese gelen yerinde koltuk, kanepe ve köşe takımı yıkama tanıtım sayfası.
       </p>
-      <p style="font-size: 0.75rem; margin-top: 1rem; color: #64748b;">© 2026 Tüm hakları saklıdır. Bu site teknik iskelet aşamasındadır.</p>
+      <div style="margin-bottom: var(--spacing-6); font-size: var(--font-size-sm);">
+        <a href="/gizlilik.html" style="color: #cbd5e1; text-decoration: underline;">
+          Gizlilik Bildirimi ve Aydınlatma Metni
+        </a>
+      </div>
+      <p style="font-size: var(--font-size-xs); color: #64748b;">
+        © 2026 Bursa KoltukPro. Tüm hakları saklıdır. Sitemiz şu anda geliştirme aşamasındadır.
+      </p>
     </div>
   </footer>
 
-  <!-- Mobil Sabit Alt CTA Çubuğu (Geliştirme / İskelet) -->
-  <div style="position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 0.75rem 1rem; border-top: 1px solid var(--color-border); display: flex; gap: 0.5rem; z-index: 100;" class="mobile-cta-bar">
-    <a href="#" class="btn btn-whatsapp" data-action="whatsapp-cta" style="flex: 2;">
+  <!-- 10. MOBİL SABİT ALT CTA ÇUBUĞU (BOTTOM FLOATING BAR) -->
+  <aside class="mobile-cta-bar" aria-label="Hızlı İletişim Çubuğu">
+    <a href="#" class="btn btn-whatsapp mobile-btn-whatsapp" data-action="whatsapp-cta">
       💬 WhatsApp Fiyat Al
     </a>
-    <a href="#" class="btn btn-outline" data-action="phone-cta" style="flex: 1;">
+    <a href="#" class="btn btn-outline mobile-btn-phone" data-action="phone-cta">
       📞 Ara
     </a>
+  </aside>
+
+  <!-- 11. GÜVENLİ BİLGİLENDİRME MODALI (NULL FALLBACK) -->
+  <div class="info-modal-backdrop" id="info-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title" hidden>
+    <div class="info-modal-dialog">
+      <div class="info-modal-icon" aria-hidden="true">ℹ️</div>
+      <h3 class="info-modal-title" id="modal-title">Hazırlık Aşamasında</h3>
+      <p class="info-modal-text" id="modal-text">
+        İşletmenin resmi iletişim numarası henüz sisteme girilmemiştir. Sitemiz şu anda hazırlık aşamasında olup, numara tanımlandığında doğrudan mesajlaşma başlayacaktır.
+      </p>
+      <button type="button" class="btn btn-primary btn-block" id="modal-close-btn">
+        Anladım, Kapat
+      </button>
+    </div>
   </div>
 
   <script type="module" src="/src/main.js"></script>

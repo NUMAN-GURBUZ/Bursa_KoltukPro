@@ -5,10 +5,10 @@
 ```
 Aşama 0 ██████████ ✅ Tamamlandı
 Aşama 1 ██████████ ✅ Tamamlandı
-Aşama 2 ██████████ 🔄 Reklam Odaklı UI/UX Revizyonu (Sunuluyor)
+Aşama 2 ██████████ ✅ Tamamlandı (UI/UX Planı: docs/UI_UX_PLAN.md)
 Aşama 3 ██████████ ✅ Tamamlandı (Vite İskeleti & Build Başarılı)
-Aşama 4 ░░░░░░░░░░ ⏳ Sırada (Tasarım Sistemi & Ana Sayfa Kodlaması)
-Aşama 5 ░░░░░░░░░░ Beklemede (İçerik & Etkileşimler)
+Aşama 4 ██████████ ✅ Tamamlandı (Tasarım Sistemi & Ana Sayfa Uygulandı)
+Aşama 5 ░░░░░░░░░░ ⏳ Sırada (Gerçek Görseller & Doğrulanmış İlçeler Eklendiğinde İçerik Zenginleştirme)
 Aşama 6 ░░░░░░░░░░ Beklemede (SEO & Analitik)
 Aşama 7 ░░░░░░░░░░ Beklemede (Test & Kalite)
 Aşama 8 ░░░░░░░░░░ Beklemede (Yayına Alma)
@@ -32,31 +32,36 @@ Aşama 8 ░░░░░░░░░░ Beklemede (Yayına Alma)
 
 ---
 
-### Aşama 2 — Reklam Odaklı UI/UX ve İçerik Planı 🔄
-**Kullanıcının son kararları doğrultusunda hazırlandı ve sunuldu:**
-- [x] İlk mimari ve tel kafes planı (`docs/STAGE2_UIUX_PLAN.md`)
-- [x] Reklam odaklı, dikkat çekici, net WhatsApp CTA kurgulu revize sunum
-- [x] İlk ekran (Hero) doğrudan değer önerisi ve mesaj hiyerarşisi
-- [x] Gerçek fotoğraf çekim listesi ve geçici yer tutucu stratejisi
+### Aşama 2 — Reklam Odaklı UI/UX ve İçerik Planı ✅
+- [x] `docs/UI_UX_PLAN.md` oluşturuldu.
+- [x] Renkler, tipografi, butonlar, 9 ana bölüm kurgusu, mobil alt CTA barı, erişilebilirlik netleştirildi.
+- [x] Dürüst dil ve sıfır uydurma veri ilkeleri belirlendi.
 
 ---
 
 ### Aşama 3 — Teknik Mimari ve Temel Proje İskeleti ✅
-**Tamamlandı & Doğrulandı:**
 - [x] Vite + Vanilla HTML/CSS/JS iskelet kurulumu (`package.json`, `vite.config.js`)
-- [x] Dizin yapısı (`src/config`, `src/components`, `src/styles`, `src/utils`, `public`)
+- [x] Dizin yapısı (`src/config`, `src/styles`, `src/utils`, `public`)
 - [x] `business.js` güvenli merkezi yapılandırma (uydurma veri yok, null kontrolleri var)
-- [x] Başlangıç semantik `index.html` ve `gizlilik.html`
-- [x] `npm install` ve `npm run build` komutları çalıştırıldı, sıfır hatayla doğrulandı (`dist` üretildi, JS 2.49 KB)
+- [x] `npm install` ve `npm run build` komutları çalıştırıldı, sıfır hatayla doğrulandı.
 
 ---
 
-### Aşama 4 — Tasarım Sistemi ve Ana Sayfa
-**Bağımlılıklar:** Aşama 2 reklam odaklı UI/UX onayı + Aşama 3 teknik iskelet
-- [ ] CSS token'ları (renkler, tipografi, spacing)
-- [ ] Semantik header ve footer
-- [ ] Hero bölümü (Bursa seyyar hizmet + WhatsApp CTA)
-- [ ] Mobil sabit çift buton (WhatsApp + Ara)
+### Aşama 4 — Tasarım Sistemi ve Ana Sayfa ✅
+- [x] CSS token'ları, modern stil reset ve responsive kurallar tamamlandı.
+- [x] Semantik header (geçici marka rozeti ve menü) uygulandı.
+- [x] Hero bölümü (yerinde seyyar hizmet değeri + fotoğrafla WhatsApp teklif CTA'sı).
+- [x] 3 hizmet kartı (Koltuk, kanepe, köşe takımı).
+- [x] 4 adımlı süreç akışı (Nasıl çalışır?).
+- [x] Gerçek görseller için dürüstçe etiketlenmiş nötr yer tutucular.
+- [x] Kumaş ve leke rehberi (sekmeli interaktif ipuçları ve uyarılar).
+- [x] Sıkça sorulan sorular (accordion).
+- [x] Hizmet bölgesi bilgilendirmesi (Bursa adrese servis notu).
+- [x] WhatsApp kapanış CTA'sı ve footer (gizlilik aydınlatması).
+- [x] Mobil ekran için sabit alt çift buton (WhatsApp %70 + Ara %30).
+- [x] İletişim bilgisi henüz girilmediğinde açılan erişilebilir bilgilendirme modalı (`#info-modal`).
+- [x] Teknik denetim düzeltmeleri: `business.js` config sadeleştirmesi (tek kaynak), ölü kod (`handleWhatsAppClick`) temizliği ve Open Graph metaverileri tamamlandı.
+- [ ] Kalan inline stillerin CSS sınıflarına taşınması (bu görevde kapsam dışı; denetimde `index.html` ve `gizlilik.html` içinde toplam 79 inline `style` kullanımı bulundu).
 
 ---
 
@@ -87,6 +92,7 @@ Aşama 8 ░░░░░░░░░░ Beklemede (Yayına Alma)
 
 ### Aşama 8 — Yayına Alma
 - [ ] Alan adı ve barındırma kurulumu (Netlify / Vercel / Cloudflare Pages)
+- [ ] Barındırmaya özel güvenlik başlıkları (CSP, X-Frame-Options, X-Content-Type-Options)
 - [ ] Canlı ortam SSL & yönlendirme doğrulaması
 - [ ] Yayın kontrol listesi
 

@@ -133,7 +133,7 @@ Her önemli teknik ve mimari karar, gerekçesiyle birlikte bu belgede kayıt alt
 **Tarih:** 2026-10-21  
 **Durum:** ✅ Kesinleşti  
 
-**Karar:** Ana site tek bir sayfa (`index.html`) olarak yapılandırılacak. Bölümler anchor linklerle erişilebilir. Gizlilik bildirimi ayrı sayfa (`privacy.html`).
+**Karar:** Ana site tek bir sayfa (`index.html`) olarak yapılandırılacak. Bölümler anchor linklerle erişilebilir. Gizlilik bildirimi ayrı sayfa (`gizlilik.html`).
 
 **Gerekçe:**
 - Küçük hizmet işletmesi için çok sayfalı yapı gereksiz.
@@ -204,6 +204,51 @@ Her önemli teknik ve mimari karar, gerekçesiyle birlikte bu belgede kayıt alt
 
 ---
 
+## D13: Geçici Marka Adı ve Etiketleme
+
+**Tarih:** 2026-10-21
+**Durum:** ✅ Kesinleşti
+
+**Karar:** `KoltukMobil Bursa` adı yalnızca geçici proje adı olarak kullanılacak, başlıkta ve footer'da açıkça `Geçici Proje Adı` rozeti ile belirtilecektir. Kesin marka kararı verildiğinde `business.js` üzerinden güncellenecektir.
+
+---
+
+## D14: Null-Safe İletişim ve Bilgilendirme Modalı
+
+**Tarih:** 2026-10-21
+**Durum:** ✅ Kesinleşti
+
+**Karar:** Gerçek telefon veya WhatsApp numarası henüz sağlanmadığı için butonlar geçersiz/kırık URL üretmeyecek; tıklandığında işletmenin hazırlık aşamasında olduğunu belirten şık ve erişilebilir bir bilgilendirme modalı (`#info-modal`) açacaktır.
+
+---
+
+## D15: Dürüst Dil ve Abartısız İfadeler
+
+**Tarih:** 2026-10-21
+**Durum:** ✅ Kesinleşti
+
+**Karar:** Sitede "Bursa geneli", "tüm lekeleri %100 çıkarır", "dakikalar içinde teklif" gibi kanıtlanmamış garantiler veya sahte aciliyet unsurları yer almayacak; hizmetin adrese gelerek yerinde yapıldığı, fotoğrafla doğrudan teklif verildiği nötr ve net bir dille anlatılacaktır.
+
+---
+
+## D16: Tek Kaynak İlkesi ve Config Sadeleştirmesi
+
+**Tarih:** 2026-10-21
+**Durum:** ✅ Kesinleşti
+
+**Karar:** `src/config/business.js` dosyası yalnızca işletme adı, geçici durum, telefon, WhatsApp, çalışma saatleri, konum ve izleme ayarlarını barındıracaktır. `index.html` içinde statik ve semantik olarak bulunan hizmet açıklamaları, leke rehberi ve SSS metinleri çift kaynak oluşturmaması için config dosyasından arındırılmıştır.
+
+---
+
+## D17: Barındırmaya Özgü Güvenlik Başlıkları Stratejisi
+
+**Tarih:** 2026-10-21
+**Durum:** ✅ Kesinleşti
+
+**Karar:** Statik barındırma sağlayıcısı (Netlify, Cloudflare Pages veya Vercel) henüz seçilmediği için rastgele bir platforma özgü `_headers` dosyası eklenmemiştir. Barındırma seçimi yapıldığında ilgili platforma özel Content Security Policy (CSP), X-Frame-Options ve X-Content-Type-Options kuralları yayın öncesi kontrol listesinde tanımlanacaktır.
+
+---
+
 ## Karar Durum Açıklamaları
 
 - ✅ **Kesinleşti / Onaylandı:** Doğrudan kullanıcı tarafından onaylanan veya teknik olarak zorunlu kararlar.
@@ -213,4 +258,3 @@ Her önemli teknik ve mimari karar, gerekçesiyle birlikte bu belgede kayıt alt
 ---
 
 *Son güncelleme: 2026-10-21*
-

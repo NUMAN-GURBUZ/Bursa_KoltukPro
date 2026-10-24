@@ -2,16 +2,26 @@
  * WhatsApp Bağlantı Üretici
  * 
  * Sıfır Uydurma Kuralı:
- * Numara null, tanımsız veya boş ise asla bozuk/uydurma link üretmez; null döner.
+ * Numara null, tanımsız, boş veya geçersiz ise asla bozuk/uydurma link üretmez; null döner.
  */
 export function getWhatsAppUrl(phoneNumber, customMessage = null) {
   if (!phoneNumber || typeof phoneNumber !== 'string') {
     return null;
   }
 
-  // Sadece rakamları ayıkla
-  const cleanNumber = phoneNumber.replace(/\D/g, '');
-  if (cleanNumber.length < 10) {
+  // Yalnızca rakamları kullan ve Türkiye mobil numaralarını wa.me için uluslararası biçime çevir.
+  const digits = phoneNumber.replace(/\D/g, '');
+  const localTurkishMobile = /^0?5\d{9}$/;
+  const internationalTurkishMobile = /^905\d{9}$/;
+
+  let cleanNumber = null;
+  if (localTurkishMobile.test(digits)) {
+    cleanNumber = `90${digits.replace(/^0/, '')}`;
+  } else if (internationalTurkishMobile.test(digits)) {
+    cleanNumber = digits;
+  }
+
+  if (!cleanNumber) {
     return null;
   }
 
@@ -21,18 +31,4 @@ export function getWhatsAppUrl(phoneNumber, customMessage = null) {
   }
 
   return baseUrl;
-}
-
-/**
- * WhatsApp CTA Tıklama Olayı Güvenlik Sarmalayıcısı
- */
-export function handleWhatsAppClick(event, phoneNumber, message) {
-  const url = getWhatsAppUrl(phoneNumber, message);
-  if (!url) {
-    event?.preventDefault();
-    console.warn('[Bursa Seyyar Koltuk] WhatsApp numarası henüz tanımlanmadığı için yönlendirme yapılamadı.');
-    alert('İşletme iletişim numarası henüz sisteme tanımlanmamıştır. Lütfen daha sonra tekrar deneyiniz.');
-    return false;
-  }
-  return true;
 }
