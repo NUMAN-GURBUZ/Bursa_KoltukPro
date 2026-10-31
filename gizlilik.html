@@ -3,88 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gizlilik ve Bilgilendirme Metni | Bursa KoltukPro</title>
-  <meta name="description" content="Bursa KoltukPro seyyar koltuk yıkama tanıtım sayfası gizlilik, kişisel veriler ve bilgilendirme metni taslağı.">
+  <title>Gizlilik ve Veri Kullanımı | Bursa Koltuk Pro</title>
+  <meta name="description" content="Bursa Koltuk Pro web sitesinin iletişim kanalları ve kişisel verilerin kullanımı hakkında bilgilendirme.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://bursakoltukpro.com.tr/gizlilik.html">
+  <meta property="og:title" content="Gizlilik ve Veri Kullanımı | Bursa Koltuk Pro">
+  <meta property="og:description" content="Bursa Koltuk Pro web sitesinin iletişim kanalları ve kişisel verilerin kullanımı hakkında bilgilendirme.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="Bursa Koltuk Pro">
+  <meta property="og:url" content="https://bursakoltukpro.com.tr/gizlilik.html">
+  <meta property="og:image" content="https://bursakoltukpro.com.tr/images/og-cover.jpg">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#143526">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/styles/tokens.css">
   <link rel="stylesheet" href="/src/styles/base.css">
   <link rel="stylesheet" href="/src/styles/layout.css">
   <link rel="stylesheet" href="/src/styles/components.css">
 </head>
-<body style="background: var(--color-light);">
-  <header style="border-bottom: 1px solid var(--color-border); padding: 1.25rem 0;">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-      <a href="/" style="font-weight: 700; color: var(--color-primary-dark); font-size: 0.95rem;">
-        ← Ana Sayfaya Dön
+<body>
+  <a href="#main-content" class="sr-only">Ana içeriğe doğrudan atla</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="brand" aria-label="Bursa Koltuk Pro ana sayfa">
+        <img class="brand-logo" src="/images/logo-bursa-koltukpro.svg" alt="BURSA KOLTUK PRO — Yerinde Koltuk ve Döşeme Bakımı" width="548" height="112" fetchpriority="high">
+        <span class="sr-only" data-bind="brand-name">Bursa Koltuk Pro</span>
       </a>
+
+      <nav class="header-nav" id="site-nav" aria-label="Ana Gezinti Menüsü">
+        <ul class="header-nav-list">
+          <li><a href="/" class="header-nav-link">← Ana Sayfa</a></li>
+          <li><a href="/#hizmetler" class="header-nav-link">Hizmetlerimiz</a></li>
+          <li><a href="/#surec" class="header-nav-link">Süreç</a></li>
+          <li><a href="/#sss" class="header-nav-link">SSS</a></li>
+        </ul>
+      </nav>
+
       <div class="header-actions">
-        <span class="badge badge-temp">Bilgilendirme Taslağı</span>
-        <button type="button" class="theme-toggle" data-action="theme-toggle" aria-label="Karanlık moda geç" aria-pressed="false" title="Karanlık moda geç">
-          <span aria-hidden="true" data-theme-toggle-icon>🌙</span>
+        <a href="#" class="btn btn-ghost header-phone-btn" data-action="phone-cta" aria-label="Telefonla bilgi alın">Hemen Ara</a>
+        <a href="#" class="btn btn-whatsapp header-wa" data-action="whatsapp-cta" aria-label="WhatsApp üzerinden teklif alın">WhatsApp Fiyat Al</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menüyü aç">
+          <span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <main class="site-main">
-    <div class="container" style="max-width: 780px; padding-top: 3rem; padding-bottom: 4rem;">
-      <h1 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-dark);">
-        Gizlilik Bildirimi ve Bilgilendirme Metni
-      </h1>
-      
-      <div style="background: #fffbeb; border: 1px solid #fef3c7; border-radius: var(--radius-md); padding: 1rem; margin-bottom: 2rem; font-size: 0.85rem; color: #92400e;">
-        <strong>Önemli Bilgilendirme:</strong> Bu metin, web sitemizin mevcut teknik yapısını açıklayan bir ön taslaktır. Hukuki danışmanlık yerine geçmez; yayına alma sürecinde nihai işletme bilgileriyle birlikte hukuki uygunluk kontrolünden geçirilecektir.
+  <main id="main-content" class="site-main">
+    <section class="section section-cream legal-section" aria-labelledby="legal-title">
+      <div class="container legal-container">
+        <a href="/" class="text-link legal-back-link">← Ana Sayfaya Dön</a>
+        <p class="eyebrow">Kurumsal Bilgilendirme</p>
+        <h1 id="legal-title" class="display-title legal-title">
+          Gizlilik ve <em>Veri Kullanımı</em>
+        </h1>
+
+        <p class="legal-lead">
+          Bu sayfa, Bursa Koltuk Pro web sitesinin çalışma biçimini ve ziyaretçilerin bizimle hangi yollarla iletişim kurduğunu açıklar. İletişim için WhatsApp veya telefon kullanıldığında ilgili hizmet sağlayıcıların kendi gizlilik koşulları da geçerli olabilir.
+        </p>
+
+        <div class="legal-card">
+          <section class="legal-block">
+            <h2>1. Hizmet Modeli ve Tanıtım Niteliği</h2>
+            <p>
+              Bu web sitesi, Bursa ilinde seyyar (müşterinin adresine gidilerek yerinde yapılan) koltuk, kanepe ve döşemeli mobilya temizleme hizmetinin tanıtımı amacıyla işletilmektedir. Sitemiz bir e-ticaret platformu veya doğrudan çevrim içi satış kanalı değildir.
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h2>2. Web Sitesinde Veri Toplama</h2>
+            <p>
+              Web sitesinde kullanıcı hesabı, kayıt formu, bülten aboneliği veya çevrim içi ödeme alanı bulunmamaktadır. Bununla birlikte, web barındırma hizmeti ve tarayıcı istekleri bağlantı güvenliği için teknik kayıtlar oluşturabilir; bu kayıtların kapsamı kullanılan barındırma sağlayıcısının uygulamalarına bağlıdır.
+            </p>
+            <p>
+              İletişimi WhatsApp veya telefon üzerinden siz başlatırsınız. Fotoğraf, telefon numarası, konum/adres veya randevu bilgisi paylaşırsanız bunlar fiyatı değerlendirmek, hizmet uygunluğunu netleştirmek ve randevu sürecini yürütmek için kullanılabilir. Lütfen fotoğrafa gereksiz kişisel belge veya kişileri içeren görüntüler eklemeyin.
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h2>3. Çerezler ve Analitik Takip Araçları</h2>
+            <p>
+              Proje yapılandırmasında Google Analytics, Google Ads dönüşüm kimliği ve Meta Pixel kimliği tanımlı değilse bu izleme modülü etkinleşmez. Ancak web sitesi yazı tiplerini Google Fonts üzerinden yükler; bu istek sırasında Google'ın sunucularına teknik bağlantı bilgileri iletilebilir.
+            </p>
+            <p>
+              Gelecekte analitik veya reklam ölçüm araçları etkinleştirilirse bu sayfa güncellenmelidir. Bir iletişim butonuna tıklanması, tek başına satış veya tamamlanmış randevu anlamına gelmez.
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h2>4. İletişim</h2>
+            <p>
+              Gizlilik uygulamalarıyla ilgili sorularınız için web sitesindeki WhatsApp veya telefon bağlantısını kullanabilirsiniz. Paylaşmanız gereken bir bilgi varsa yalnızca ilgili talebin değerlendirilmesi için gerekli olan bilgileri iletmenizi öneririz.
+            </p>
+            <div class="legal-actions">
+              <a href="#" class="btn btn-whatsapp" data-action="whatsapp-cta">WhatsApp ile İletişime Geçin</a>
+              <a href="#" class="btn btn-light" data-action="phone-cta">Telefonla Arayın</a>
+            </div>
+          </section>
+        </div>
       </div>
-
-      <section style="margin-bottom: 2rem;">
-        <h2 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--color-primary-dark);">
-          1. Hizmet Modeli ve Tanıtım Niteliği
-        </h2>
-        <p style="color: var(--color-dark-muted); line-height: 1.7;">
-          Bu web sitesi, Bursa ilinde seyyar (müşterinin adresine gidilerek yerinde yapılan) koltuk, kanepe ve döşemeli mobilya temizleme hizmetinin tanıtımı amacıyla işletilmektedir. Sitemiz bir e-ticaret platformu veya doğrudan çevrim içi satış kanalı değildir.
-        </p>
-      </section>
-
-      <section style="margin-bottom: 2rem;">
-        <h2 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--color-primary-dark);">
-          2. Web Sitesinde Veri Toplama
-        </h2>
-        <p style="color: var(--color-dark-muted); line-height: 1.7;">
-          Web sitemiz üzerinde kullanıcı üyeliği, kayıt formu, bülten aboneliği veya kredi kartı/ödeme altyapısı bulunmamaktadır. Ziyaretçilerin doğrudan web sitesi üzerinden herhangi bir kişisel verisi toplanmamakta ve saklanmamaktadır.
-        </p>
-        <p style="color: var(--color-dark-muted); line-height: 1.7; margin-top: 0.5rem;">
-          İletişim, WhatsApp veya telefon aracılığıyla doğrudan kullanıcı iradesiyle başlatılır. Fiyat teklifi amacıyla WhatsApp üzerinden ilettiğiniz mobilya fotoğrafları ve adres bilgileri yalnızca randevu oluşturma ve hizmet sunma amacıyla değerlendirilir.
-        </p>
-      </section>
-
-      <section style="margin-bottom: 2rem;">
-        <h2 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--color-primary-dark);">
-          3. Çerezler ve Analitik Takip Araçları
-        </h2>
-        <p style="color: var(--color-dark-muted); line-height: 1.7;">
-          Mevcut aşamada web sitesinde kullanıcıları profillemeye yarayan üçüncü taraf reklam pikselleri (Meta Pixel, Google Ads vb.) veya analitik çerezler aktif değildir.
-        </p>
-        <p style="color: var(--color-dark-muted); line-height: 1.7; margin-top: 0.5rem;">
-          Gelecekte analitik ölçüm araçlarının etkinleştirilmesi halinde, WhatsApp veya arama butonlarına tıklanma sayıları yalnızca iletişim talebi ilgisini anlamak amacıyla sayılabilir; bu tıklamalar kesin bir satış, tamamlanmış hizmet veya gerçekleşmiş randevu olarak kabul edilmez.
-        </p>
-      </section>
-
-      <section style="margin-bottom: 2rem;">
-        <h2 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--color-primary-dark);">
-          4. İletişim
-        </h2>
-        <p style="color: var(--color-dark-muted); line-height: 1.7;">
-          Kişisel verileriniz ve gizlilik uygulamalarımızla ilgili sorularınız için WhatsApp veya telefon hattımız üzerinden bizimle iletişime geçebilirsiniz.
-        </p>
-      </section>
-    </div>
+    </section>
   </main>
 
-  <footer style="background: var(--color-light); border-top: 1px solid var(--color-border); padding: 1.5rem 0; text-align: center; font-size: 0.875rem; color: var(--color-dark-muted);">
-    <div class="container">
-      <p>© 2026 Bursa KoltukPro. Tüm hakları saklıdır.</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="/images/logo-bursa-koltukpro-dark.svg" alt="BURSA KOLTUK PRO" width="548" height="112" loading="lazy">
+        <strong class="footer-brand sr-only" data-bind="brand-name">Bursa Koltuk Pro</strong>
+        <p>Bursa'da koltuk, kanepe, çekyat, yatak ve döşemeli sandalye temizliği; adresinizde hizmet.</p>
+      </div>
+      <div>
+        <h3>Hizmetler</h3>
+        <a href="/#hizmetler">Koltuk yıkama</a>
+        <a href="/#hizmetler">Kanepe ve çekyat</a>
+        <a href="/#hizmetler">Köşe takımı</a>
+        <a href="/#hizmetler">Yatak ve sandalye</a>
+      </div>
+      <div>
+        <h3>Sayfa</h3>
+        <a href="/#surec">Nasıl çalışır?</a>
+        <a href="/#leke-rehberi">Leke rehberi</a>
+        <a href="/#sss">SSS</a>
+        <a href="/gizlilik.html" aria-current="page">Gizlilik</a>
+      </div>
+      <div>
+        <h3>İletişim</h3>
+        <a href="#" data-action="whatsapp-cta">WhatsApp fiyat al</a>
+        <a href="#" data-action="phone-cta">Telefonla ara</a>
+        <p>Seyyar hizmet · Bursa</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Bursa Koltuk Pro. Tüm hakları saklıdır.</p>
     </div>
   </footer>
-  <script type="module" src="/src/utils/theme.js"></script>
+
+  <aside class="mobile-cta-bar" aria-label="Hızlı İletişim Çubuğu">
+    <a href="#" class="btn btn-whatsapp mobile-btn-whatsapp" data-action="whatsapp-cta">WhatsApp Fiyat Al</a>
+    <a href="#" class="btn btn-light mobile-btn-phone" data-action="phone-cta">Ara</a>
+  </aside>
+
+  <div class="info-modal-backdrop" id="info-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title" hidden>
+    <div class="info-modal-dialog">
+      <h3 class="info-modal-title" id="modal-title">Hazırlık Aşamasında</h3>
+      <p class="info-modal-text" id="modal-text">
+        İşletmenin resmi iletişim numarası henüz sisteme girilmemiştir.
+      </p>
+      <button type="button" class="btn btn-whatsapp btn-block" id="modal-close-btn">Anladım, Kapat</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

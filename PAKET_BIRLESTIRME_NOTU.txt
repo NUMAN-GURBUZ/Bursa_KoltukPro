@@ -1,0 +1,13 @@
+Bursa KoltukPro — Birleştirilmiş Tam Proje Paketi
+
+Bu paket, şu arşivlerde bulunan proje dosyalarının birleşimidir:
+- Bursa_KoltukPro_revize.zip (ilk proje)
+- Bursa_KoltukPro_Gorsel_Revizyon_v2.zip
+- Bursa_KoltukPro_Profesyonel_Revizyon_v3.zip
+- Bursa_KoltukPro_Profesyonel_Revizyon_v4_TAM.zip
+
+Bir dosya birden fazla sürümde aynı yolda bulunuyorsa en yeni v4 sürümündeki içerik korunmuştur. Önceki paketlerde yalnızca bulunan dosyalar silinmemiş, birleştirmeye dahil edilmiştir.
+
+Bu paket .git, node_modules ve dist klasörlerini içermez: .git mevcut yerel deponuzda korunmalıdır; node_modules npm install ile kurulur; dist npm run build ile üretilir.
+
+Önerilen kullanım: ZIP'i ayrı bir klasöre çıkarın ve içindeki bursa_clean klasörünün içeriğini mevcut proje klasörüne kopyalayın. Dosya değiştirme uyarısı çıkarsa bu paketteki sürümü kullanın. Mevcut proje klasörünü boşaltmayın ve .git klasörünü silmeyin.

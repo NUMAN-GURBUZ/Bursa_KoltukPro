@@ -1,6 +1,5 @@
-# robots.txt — Bursa Seyyar Koltuk Yıkama
-# Not: Alan adı kesinleştiğinde Sitemap yönergesi eklenecektir.
-
+# Bursa KoltukPro — robots.txt
 User-agent: *
 Allow: /
-Disallow: /gizlilik.html
+
+Sitemap: https://bursakoltukpro.com.tr/sitemap.xml

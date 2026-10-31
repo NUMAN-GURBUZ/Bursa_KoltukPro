@@ -2,10 +2,8 @@ import './styles/tokens.css';
 import './styles/base.css';
 import './styles/layout.css';
 import './styles/components.css';
-import './utils/theme.js';
-
 import { businessConfig } from './config/business.js';
-import { getWhatsAppUrl } from './utils/whatsapp.js';
+import { getWhatsAppUrl, createWhatsAppMessage } from './utils/whatsapp.js';
 import { getPhoneTelUrl } from './utils/phone.js';
 import { initAnalytics } from './utils/analytics.js';
 
@@ -95,19 +93,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. WhatsApp CTA Butonlarını Güvenli Yapılandır
+  // 3. WhatsApp CTA Butonlarını Merkezi Mesaj Sistemiyle Güvenli Yapılandır
   const whatsappButtons = document.querySelectorAll('[data-action="whatsapp-cta"]');
 
   whatsappButtons.forEach(btn => {
-    const customMsg = btn.getAttribute('data-whatsapp-message') || businessConfig.contact.whatsappPrefillMessage;
-    const whatsappUrl = getWhatsAppUrl(businessConfig.contact.whatsapp, customMsg);
+    const serviceKey = btn.getAttribute('data-whatsapp-service');
+    const explicitMsg = btn.getAttribute('data-whatsapp-message');
+    const resolvedMessage = explicitMsg || createWhatsAppMessage(serviceKey, businessConfig);
+    const whatsappUrl = getWhatsAppUrl(businessConfig.contact.whatsapp, resolvedMessage);
 
     if (whatsappUrl) {
       btn.setAttribute('href', whatsappUrl);
       btn.setAttribute('target', '_blank');
       btn.setAttribute('rel', 'noopener noreferrer');
       btn.addEventListener('click', () => {
-        analytics.trackEvent('whatsapp_click', { label: btn.getAttribute('data-whatsapp-message') ? 'service_card_cta' : 'general_cta' });
+        analytics.trackEvent('whatsapp_click', {
+          label: serviceKey ? 'service_card_cta' : 'general_cta',
+          service: serviceKey || 'general'
+        });
       });
     } else {
       btn.setAttribute('href', '#');
@@ -141,7 +144,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 5. İnteraktif Kumaş ve Leke Rehberi Sekme Mantığı
+  // 5. Mobil menü ve sol üst logo pürüzsüz ana sayfa geçişi
+  const header = document.querySelector('.site-header');
+  const navToggle = document.querySelector('.nav-toggle');
+  const closeMobileMenu = () => {
+    header?.classList.remove('is-open');
+    navToggle?.setAttribute('aria-expanded', 'false');
+    navToggle?.setAttribute('aria-label', 'Menüyü aç');
+  };
+
+  navToggle?.addEventListener('click', () => {
+    const open = header?.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(Boolean(open)));
+    navToggle.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+  });
+
+  header?.querySelectorAll('.header-nav-link').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  const brandLinks = document.querySelectorAll('.brand');
+  brandLinks.forEach(brandLink => {
+    brandLink.addEventListener('click', (e) => {
+      const path = window.location.pathname;
+      const isHomePage = path === '/' || path.endsWith('/index.html');
+      if (isHomePage) {
+        e.preventDefault();
+        closeMobileMenu();
+        if (window.location.hash) {
+          window.history.pushState(null, '', path);
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (typeof brandLink.blur === 'function') {
+          brandLink.blur();
+        }
+      }
+    });
+  });
+
+  // 6. İnteraktif Kumaş ve Leke Rehberi Sekme Mantığı
   const tabButtons = document.querySelectorAll('[data-tab-target]');
   const tabPanels = document.querySelectorAll('[data-tab-panel]');
 
@@ -169,4 +210,47 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+
+  // 7. Sayfa kaydırma animasyonları (hareket azaltma tercihini dikkate alır)
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealSelectors = [
+    '.highlight-intro', '.info-sheet', '.forest-note', '.services-intro', '.service-tile',
+    '.process-copy', '.process-track li', '.process-photo', '.benefits-copy', '.benefit-list li',
+    '.benefits-photo', '.gallery-piece', '.guide-layout > div', '.faq-layout > div',
+    '.area-card', '.cta-finale-copy', '.footer-grid > div'
+  ];
+
+  if (!reduceMotion) {
+    const revealTargets = [...new Set(revealSelectors.flatMap(selector => [...document.querySelectorAll(selector)]))];
+    const staggerSelectors = ['.service-tile', '.process-track li', '.benefit-list li', '.gallery-piece', '.footer-grid > div'];
+    staggerSelectors.forEach(selector => {
+      document.querySelectorAll(selector).forEach((element, index) => {
+        element.style.setProperty('--reveal-delay', `${Math.min(index, 4) * 70}ms`);
+      });
+    });
+
+    revealTargets.forEach(element => element.classList.add('reveal-on-scroll'));
+
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -36px 0px' });
+      revealTargets.forEach(element => revealObserver.observe(element));
+    } else {
+      revealTargets.forEach(element => element.classList.add('is-visible'));
+    }
+  }
+
+  // 8. Kaydırmada başlığın yüzeyini biraz belirginleştir
+  const updateHeaderSurface = () => {
+    header?.classList.toggle('is-scrolled', window.scrollY > 8);
+  };
+  updateHeaderSurface();
+  window.addEventListener('scroll', updateHeaderSurface, { passive: true });
 });

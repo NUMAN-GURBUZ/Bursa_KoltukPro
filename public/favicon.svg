@@ -1,10 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#0284C7"/>
-  <!-- Koltuk simgesi -->
-  <path d="M7 14C7 12.8954 7.89543 12 9 12H23C24.1046 12 25 12.8954 25 14V20C25 21.1046 24.1046 22 23 22H9C7.89543 22 7 21.1046 7 20V14Z" fill="white"/>
-  <path d="M5 17C5 15.8954 5.89543 15 7 15V22H6C5.44772 22 5 21.5523 5 21V17Z" fill="#E0F2FE"/>
-  <path d="M25 15C26.1046 15 27 15.8954 27 17V21C27 21.5523 26.5523 22 26 22H25V15Z" fill="#E0F2FE"/>
-  <path d="M9 22V25M23 22V25" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <!-- Temizlik parıltısı -->
-  <circle cx="23" cy="9" r="2.5" fill="#25D366"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88" width="64" height="64" role="img" aria-label="Bursa Koltuk Pro">
+  <rect x="0" y="0" width="88" height="88" rx="20" fill="#143526"/>
+  <!-- Architectural U-Embrace (Sage) -->
+  <path d="M18 35 L18 56 C18 63.7 24.3 70 32 70 L56 70 C63.7 70 70 63.7 70 56 L70 39" fill="none" stroke="#D7E3D8" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Geometric Twin Upholstery Panels (Cream) -->
+  <rect x="27" y="21" width="15" height="26" rx="5.5" fill="#F6F1E8"/>
+  <rect x="46" y="25" width="15" height="22" rx="5.5" fill="#F6F1E8"/>
+  <rect x="27" y="50.5" width="34" height="9" rx="4.5" fill="#F6F1E8"/>
+  <!-- Symmetrical 4-Point Renewal Star (Ochre) -->
+  <path d="M68 10 L70.8 17.2 L78 20 L70.8 22.8 L68 30 L65.2 22.8 L58 20 L65.2 17.2 Z" fill="#C4842A"/>
 </svg>

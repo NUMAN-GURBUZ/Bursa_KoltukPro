@@ -1,6 +1,45 @@
+import { businessConfig } from '../config/business.js';
+
+/**
+ * Genel WhatsApp mesajını döndürür.
+ * Belirli bir hizmeti varsaymaz; müşteriyi fotoğraf paylaşarak fiyat almaya yönlendirir.
+ */
+export function getGeneralMessage(config = businessConfig) {
+  return (
+    config?.contact?.whatsappMessages?.general ||
+    config?.contact?.whatsappPrefillMessage ||
+    ''
+  );
+}
+
+/**
+ * Hizmet anahtarına (ör. 'koltuk-yikama', 'kose-takimi') özel WhatsApp mesajını döndürür.
+ * Geçersiz veya tanımsız bir anahtar verilirse güvenli biçimde genel mesaja döner.
+ */
+export function getServiceMessage(serviceKey, config = businessConfig) {
+  if (!serviceKey || typeof serviceKey !== 'string') {
+    return getGeneralMessage(config);
+  }
+
+  const normalizedKey = serviceKey.trim().toLowerCase();
+  const serviceMessages = config?.contact?.whatsappMessages?.services || {};
+
+  return serviceMessages[normalizedKey] || getGeneralMessage(config);
+}
+
+/**
+ * İlgili buton veya hizmet bağlamına göre gönderilecek WhatsApp mesajını oluşturur.
+ */
+export function createWhatsAppMessage(serviceKey = null, config = businessConfig) {
+  if (serviceKey && typeof serviceKey === 'string' && serviceKey.trim().length > 0) {
+    return getServiceMessage(serviceKey, config);
+  }
+  return getGeneralMessage(config);
+}
+
 /**
  * WhatsApp Bağlantı Üretici
- * 
+ *
  * Sıfır Uydurma Kuralı:
  * Numara null, tanımsız, boş veya geçersiz ise asla bozuk/uydurma link üretmez; null döner.
  */
